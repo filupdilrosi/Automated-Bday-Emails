@@ -15,8 +15,8 @@ import datetime as dt
 from random import choice
 
 LETTERS = ["letter_1.txt", "letter_2.txt", "letter_3.txt"]
-MY_EMAIL = "pythonburner56@gmail.com"
-MY_PASS = "jnkdxbyquemkzeqn"
+MY_EMAIL = "burner@gmail.com"
+MY_PASS = "password"
 today_date = dt.datetime.today()
 current_month = today_date.month
 day_of_month = today_date.day
@@ -27,7 +27,7 @@ def send_email(letter):
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()
         connection.login(user=MY_EMAIL, password=MY_PASS)
-        connection.sendmail(from_addr=MY_EMAIL, to_addrs="tristinen38@gmail.com",
+        connection.sendmail(from_addr=MY_EMAIL, to_addrs="burner2@gmail.com",
                             msg=f"Subject:Phillip's Automated Test\n\n {letter}")
 
 
